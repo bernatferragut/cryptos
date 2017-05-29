@@ -1,0 +1,18 @@
+<!--CRYPTOS APP-->
+
+<h1 align="center"> TIME & CRYPTO API TEST</h1>
+<a 
+  class="divflex" 
+  md-button 
+  (click) = "callHttService()">Get Date / Time
+</a>
+<a 
+  class="divflex" 
+  md-button 
+  (click) = "callCryptoService()">Get Crypto
+</a>
+<h1 class="divflex">
+  The Date is {{ currentDate }},  and the Time is {{ currentTime }}</h1>
+
+  <h1 class="divflex">
+  The BitCoin price is:  {{ bitCoinPrice?.last }} $</h1>
