@@ -16,5 +16,6 @@
 
 .button {
     font-size: 0.5em;   
-    color: lightgreen;  
+    color: white;
+    background-color:  black
 }

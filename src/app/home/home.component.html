@@ -7,7 +7,12 @@
 
 <h1 class="divflex">
   BTC: {{ bitCoinPrice?.last }} $</h1>
+
 <div class="divflex">
-  <a class="button" md-button (click)="upDate()">UPDATE
-  </a>
+  <button 
+    md-fab
+    (click)="upDate()"
+    class="button">
+    <md-icon>update</md-icon>
+  </button>
 </div>
