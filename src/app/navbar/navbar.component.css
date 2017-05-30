@@ -7,3 +7,8 @@
 .maintitle {
     font-family: 'Montserrat Subrayada', sans-serif, 700;
 }
+
+.navbar {
+    background-color: orangered;
+    color: white;
+}

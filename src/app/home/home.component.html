@@ -1,12 +1,15 @@
 <!--CRYPTOS HTML MAIN APP-->
 
-<h1 class="title">CRYPTO PRICE</h1>
+<h1 class="title">CRYPTO  PRICES</h1>
 
 <h1 class="divflex">
   {{ currentDate }}, {{ currentTime }}</h1>
 
 <h1 class="divflex">
   BTC: {{ bitCoinPrice?.last }} $</h1>
+
+<h1 class="divflex">
+  ETH: {{ etherPrice?.data?.price?.usd }} $</h1>
 
 <div class="divflex">
   <button 

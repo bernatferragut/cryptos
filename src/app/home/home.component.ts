@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TimeApiService } from './../services/time-api.service';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { TimeApiService } from './../services/time-api.service';
 import { CryptoApiService } from './../services/crypto-api.service';
-import { Observable } from 'rxjs/Rx';
 
 
 @Component({
@@ -15,8 +14,10 @@ export class HomeComponent implements OnInit {
   currentDate: any;
   currentTime: any;
   bitCoinPrice: any;
+  etherPrice: any;
 
-  constructor( private _timeApiService: TimeApiService, private _cryptoService: CryptoApiService) { }
+  constructor(  private _timeApiService: TimeApiService,
+                private _cryptoService: CryptoApiService ) { }
 
   ngOnInit() { 
     this.upDate();
@@ -32,6 +33,10 @@ export class HomeComponent implements OnInit {
     this.bitCoinPrice = this._cryptoService.getBitcoinPrice()
     .subscribe( res => this.bitCoinPrice = res);
     console.log(this.bitCoinPrice.last);
+
+    this.etherPrice = this._cryptoService.getEthereumPrice()
+    .subscribe( res => this.etherPrice = res);
+    console.log(this.etherPrice);
   }
 
 }

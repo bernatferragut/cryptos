@@ -13,4 +13,8 @@ export class CryptoApiService {
     return this._http.get('https://www.bitstamp.net/api/ticker').map( (res: Response) => res.json() );
   }
 
+  getEthereumPrice() {
+    return this._http.get('https://etherchain.org/api/basic_stats').map( (res: Response) => res.json() );
+  }
+
 }
