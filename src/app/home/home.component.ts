@@ -21,17 +21,17 @@ export class HomeComponent implements OnInit {
     // this._cryptoService = _cryptoService;
   }
 
-  ngOnInit() {  }
+  ngOnInit() { 
+    this.upDate();
+   }
 
-  callHttService(): void {
+  upDate(): void {
     this.currentDate = this._timeApiService.getDateTime()
     .subscribe( res => this.currentDate = res.date);
 
     this.currentTime = this._timeApiService.getDateTime()
     .subscribe( res => this.currentTime = res.time);
-  }
 
-  callCryptoService() {
     this.bitCoinPrice = this._cryptoService.getBitcoinPrice()
     .subscribe( res => this.bitCoinPrice = res);
     console.log(this.bitCoinPrice.last);
