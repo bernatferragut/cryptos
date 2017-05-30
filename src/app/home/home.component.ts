@@ -16,16 +16,13 @@ export class HomeComponent implements OnInit {
   currentTime: any;
   bitCoinPrice: any;
 
-  constructor( private _timeApiService: TimeApiService, private _cryptoService: CryptoApiService) {
-    // this._timeApiService = _timeApiService;
-    // this._cryptoService = _cryptoService;
-  }
+  constructor( private _timeApiService: TimeApiService, private _cryptoService: CryptoApiService) { }
 
   ngOnInit() { 
     this.upDate();
    }
 
-  upDate(): void {
+  upDate() {
     this.currentDate = this._timeApiService.getDateTime()
     .subscribe( res => this.currentDate = res.date);
 

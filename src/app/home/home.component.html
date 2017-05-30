@@ -6,10 +6,8 @@
   {{ currentDate }}, {{ currentTime }}</h1>
 
 <h1 class="divflex">
-  BTC:  {{ bitCoinPrice?.last }} $</h1>
-
-<a 
-  class="button" 
-  md-button
-  (click) = "upDate()">UPDATE
-</a>
+  BTC: {{ bitCoinPrice?.last }} $</h1>
+<div class="divflex">
+  <a class="button" md-button (click)="upDate()">UPDATE
+  </a>
+</div>

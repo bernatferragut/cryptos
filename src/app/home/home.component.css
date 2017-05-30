@@ -15,20 +15,6 @@
 }
 
 .button {
-
-/* We first create a flex layout context */
-  display: flex;
-  /* Then we define the flow direction and if we allow the items to wrap 
-   * Remember this is the same as:
-   * flex-direction: row;
-   * flex-wrap: wrap;
-   */
-  flex-flow: wrap;
-  
-  /* Then we define how is distributed the remaining space */
-  justify-content: center;
-
-  /*Font-size*/
-    font-size: 2.2em; 
-
+    font-size: 0.5em;   
+    color: lightgreen;  
 }
