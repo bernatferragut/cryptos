@@ -4,12 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
-import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { TimeApiService } from './services/time-api.service';
 import { CryptoApiService } from './services/crypto-api.service';
+import { BtcComponent } from './btc/btc.component';
+import { EthComponent } from './eth/eth.component';
+
+import { routes } from './app.routes';
 
 
 @NgModule({
@@ -17,6 +20,8 @@ import { CryptoApiService } from './services/crypto-api.service';
     AppComponent,
     NavbarComponent,
     HomeComponent,
+    BtcComponent,
+    EthComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,7 @@ import { CryptoApiService } from './services/crypto-api.service';
     MdCardModule,
     MdToolbarModule,
     MdIconModule,
-    RouterModule
+    routes
   ],
   providers: [TimeApiService, CryptoApiService],
   bootstrap: [AppComponent]
