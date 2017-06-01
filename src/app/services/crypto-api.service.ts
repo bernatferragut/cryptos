@@ -6,6 +6,8 @@ import { Observable } from 'rxjs/Rx';
 @Injectable()
 export class CryptoApiService {
 
+  timer = Observable.timer(0, 1000);
+
   constructor( private _http: Http ) { }
 
   getBitcoinPrice() {
@@ -21,9 +23,18 @@ export class CryptoApiService {
 
   getNewValue = () => {
     return Observable
-      .interval (2000)
+      .interval(2000)
       .flatMap((i) => this._http.get('https://www.bitstamp.net/api/ticker'))
+      .map( (res: Response) => res.json() )
+      .do(res => console.log(res));
   }
 
-  
+    getNewValue2 = () => {
+    return this.timer
+      .flatMap((i) => this._http.get('https://www.bitstamp.net/api/ticker'))
+      .map( (res: Response) => res.json() )
+      .do(res => console.log(res));
+  }
+
+
 }
