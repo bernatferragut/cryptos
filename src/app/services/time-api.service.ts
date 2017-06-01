@@ -9,15 +9,8 @@ export class TimeApiService {
 
   constructor( private _http: Http ) { }
 
-  getDateTime() {
-    return Observable.interval(1000)
-      .map(() => {
+    getDateTime() {
         return this._http.get('http://date.jsontest.com/')
-         .map(res => res.json());
-    });
-  }
-
-    getDateTime2() {
-        return this._http.get('http://date.jsontest.com/').map( (res: Response) => res.json() );
+          .map( (res: Response) => res.json() );
     }
 }

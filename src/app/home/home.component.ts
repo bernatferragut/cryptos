@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { TimeApiService } from './../services/time-api.service';
 import { CryptoApiService } from './../services/crypto-api.service';
-import { Observable } from 'rxjs/Rx';
+
 
 @Component({
   selector: 'app-home',
@@ -24,19 +24,26 @@ export class HomeComponent implements OnInit {
    }
 
   upDate() {
-    this.currentDate = this._timeApiService.getDateTime2()
-    .subscribe( res => this.currentDate = res.date);
 
-    this.currentTime = this._timeApiService.getDateTime2()
-    .subscribe( res => this.currentTime = res.time);
+    this.currentTime = this._timeApiService.getDateTime()
+      .subscribe( res => this.currentDate = res.date);
 
-    this.bitCoinPrice = this._cryptoService.getBitcoinPrice()
-    .subscribe( res => this.bitCoinPrice = res);
-    console.log(this.bitCoinPrice.last);
+    this.currentTime = this._timeApiService.getDateTime()
+      .subscribe( res => this.currentTime = res.time);
+
+    // this.bitCoinPrice = this._cryptoService.getBitcoinPrice()
+    // .subscribe( res => this.bitCoinPrice = res);
+    // console.log(this.bitCoinPrice.last);
 
     this.etherPrice = this._cryptoService.getEthereumPrice()
     .subscribe( res => this.etherPrice = res);
     console.log(this.etherPrice);
+
+    /////////////////////////////////////
+
+    this._cryptoService.getNewValue()
+      .subscribe((res) => this.bitCoinPrice = res );
+
   }
 
 }
