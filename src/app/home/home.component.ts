@@ -21,28 +21,18 @@ export class HomeComponent implements OnInit {
                 private _cryptoService: CryptoApiService ) { }
 
   ngOnInit() {
-    this.upDate();
-    /////////////////////////////////////
 
-    this.bitCoinPrice = this._cryptoService.getNewValue2()
-      .subscribe((res) => this.bitCoinPrice = res)
-   }
-
-  upDate() {
-
-    this.currentTime = this._timeApiService.getDateTime()
-      .subscribe( res => this.currentDate = res.date)
-
-    this.currentTime = this._timeApiService.getDateTime()
-      .subscribe( res => this.currentTime = res.time)
-
-    // this.bitCoinPrice = this._cryptoService.getBitcoinPrice()
-    // .subscribe( res => this.bitCoinPrice = res);
-    // console.log(this.bitCoinPrice.last);
+    this.bitCoinPrice = this._cryptoService.getBitcoinPrice()
+      .subscribe((res) => this.bitCoinPrice = res);
 
     this.etherPrice = this._cryptoService.getEthereumPrice()
-    .subscribe( res => this.etherPrice = res)
+      .subscribe((res) => this.etherPrice = res);
 
-  }
+    this.currentDate = this._timeApiService.getDateTime()
+      .subscribe( res => this.currentDate = res.date);
+
+    this.currentTime = this._timeApiService.getDateTime()
+      .subscribe( res => this.currentTime = res.time);
+   }
 
 }
