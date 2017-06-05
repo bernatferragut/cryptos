@@ -7,7 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BtcComponent } from './btc/btc.component';
 import { EthComponent } from './eth/eth.component';
 
-// Route Configuration Array    
+// Route Configuration Array
 export const router: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },

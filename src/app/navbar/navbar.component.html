@@ -3,7 +3,8 @@
   <span class="spacer"></span>
   <button md-button (click)="goHOME()"> HOME </button>
   <button md-button (click)="goBTC()"> BTC </button>
-  <button md-button (click)="goETH()"> ETH </button> 
+  <!--<button md-button (click)="goETH()"> ETH </button> -->
+  <button md-button [routerLink]="['eth']"> ETH </button>
 </md-toolbar>
 
 
