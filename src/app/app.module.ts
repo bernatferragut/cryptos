@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -11,8 +12,7 @@ import { TimeApiService } from './services/time-api.service';
 import { CryptoApiService } from './services/crypto-api.service';
 import { BtcComponent } from './btc/btc.component';
 import { EthComponent } from './eth/eth.component';
-
-import { routes } from './app.routes';
+import { router } from './app.routes';
 
 
 @NgModule({
@@ -33,7 +33,7 @@ import { routes } from './app.routes';
     MdCardModule,
     MdToolbarModule,
     MdIconModule,
-    routes
+    RouterModule.forRoot(router, {useHash: true})
   ],
   providers: [TimeApiService, CryptoApiService],
   bootstrap: [AppComponent]
