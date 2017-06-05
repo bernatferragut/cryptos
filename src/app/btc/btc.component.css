@@ -1,0 +1,21 @@
+.divflex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.7em; 
+    color: orangered;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6em; 
+    align: center;
+}
+
+.button {
+    font-size: 0.5em;   
+    color: white;
+    background-color:  black
+}

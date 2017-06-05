@@ -10,18 +10,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { TimeApiService } from './services/time-api.service';
 import { CryptoApiService } from './services/crypto-api.service';
-import { BtcComponent } from './btc/btc.component';
-import { EthComponent } from './eth/eth.component';
+// import { BtcComponent } from './btc/btc.component';
+// import { EthComponent } from './eth/eth.component';
 import { router } from './app.routes';
-
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    BtcComponent,
-    EthComponent,
   ],
   imports: [
     BrowserModule,
