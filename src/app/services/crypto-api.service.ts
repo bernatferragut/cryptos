@@ -10,18 +10,18 @@ export class CryptoApiService {
 
    // 1.Simple way of creating a http observable
 
-  getBitcoinPrice2() {
+  getBitcoinPrice() {
     return this._http.get('https://www.bitstamp.net/api/ticker')
     .map( (res: Response) => res.json() );
   }
 
-  getEthereumPrice2() {
+  getEthereumPrice() {
     return this._http.get('https://etherchain.org/api/basic_stats').map( (res: Response) => res.json() );
   }
 
   // 2.Creating a http observable every x interval of time
-  //
-  getBitcoinPrice = () => {
+  
+  getBitcoinPrice2 = () => {
     return Observable
       .interval(30 * 1000)
       .startWith(0)
@@ -30,7 +30,7 @@ export class CryptoApiService {
       .do(res => console.log(res));
   }
 
-    getEthereumPrice = () => {
+    getEthereumPrice2 = () => {
     return Observable
       .interval(30 * 1000)
       .startWith(0)

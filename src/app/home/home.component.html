@@ -1,21 +1,45 @@
 <!--CRYPTOS HTML MAIN APP-->
 
-<h1 class="title">CRYPTO  PRICES</h1>
+<h1 class="title">
+  CRYPTO  PRICES
+</h1>
 
 <h1 class="divflex">
-  {{ currentDate }}, {{ currentTime }}</h1>
+  {{ currentDate }}, {{ currentTime }}
+</h1>
 
 <h1 class="divflex">
-  BTC: {{ bitCoinPrice?.last }} $</h1>
+  BTC: {{ bitCoinPrice?.last }} $
+</h1>
 
 <h1 class="divflex">
-  ETH: {{ etherPrice?.data?.price?.usd }} $</h1>
+  ETH: {{ etherPrice?.data?.price?.usd }} $
+</h1>
 
-<!--<div class="divflex">
+<md-card>
+    <md-card-header>
+        <md-card-title>Title</md-card-title>
+        <md-card-subtitle>Subtitle</md-card-subtitle>
+    </md-card-header>
+    <img md-card-image src="Card wide image source">
+    <md-card-content>
+        Text content
+    </md-card-content>
+    <md-card-actions align="start|end">
+        <button md-button (click)="onAction1">Action1</button>
+        <button md-button (click)="onAction2">Action2</button>
+        
+    </md-card-actions>
+    <md-card-footer>
+        Footer
+    </md-card-footer>
+</md-card>
+
+<div class="divflex">
   <button 
     md-fab
-    (click)="upDate()"
+    (click)="getUpdate()"
     class="button">
     <md-icon>update</md-icon>
-  </button>-->
+  </button>
 </div>

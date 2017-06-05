@@ -21,7 +21,10 @@ export class HomeComponent implements OnInit {
                 private _cryptoService: CryptoApiService ) { }
 
   ngOnInit() {
+    this.getUpdate();
+   }  
 
+   getUpdate() {
     this.bitCoinPrice = this._cryptoService.getBitcoinPrice()
       .subscribe((res) => this.bitCoinPrice = res);
 
