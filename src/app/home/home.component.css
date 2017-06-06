@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3.7em; 
+    font-size: 2.47em; 
     color: orangered;
 }
 
@@ -10,12 +10,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 6em; 
+    font-size: 4em; 
     align: center;
 }
 
 .button {
     font-size: 0.5em;   
-    color: white;
-    background-color:  black
+    color: black;
+    background-color:  white;
+}
+
+#date {
+    color: lightblue
 }

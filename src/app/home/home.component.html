@@ -1,11 +1,11 @@
 <!--CRYPTOS HTML MAIN APP-->
 
 <h1 class="title">
-  CRYPTO  PRICES
+  BITCOIN & ETHEREUM
 </h1>
 
-<h1 class="divflex">
-  {{ currentDate }}, {{ currentTime }}
+<h1 class="divflex" id="date">
+  {{ bitCoinPrice?.timestamp | amFromUnix | amDateFormat:'hh:mmA | LL' }} 
 </h1>
 
 <h1 class="divflex">
