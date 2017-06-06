@@ -11,4 +11,7 @@
 .navbar {
     background-color: orangered;
     color: white;
+    display: block;
+    margin: auto;
+    width: 90%;
 }

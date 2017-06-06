@@ -3,11 +3,14 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { TimeApiService } from './../services/time-api.service';
 import { CryptoApiService } from './../services/crypto-api.service';
 import { Observable } from 'rxjs/Rx';
+import { routerTransition } from './../animations';
 
 @Component({
   selector: 'app-eth',
   templateUrl: './eth.component.html',
-  styleUrls: ['./eth.component.css']
+  styleUrls: ['./eth.component.css'],
+  animations: [routerTransition],
+  host: {'[@routerTransition]':''}
 })
 export class EthComponent implements OnInit {
 
