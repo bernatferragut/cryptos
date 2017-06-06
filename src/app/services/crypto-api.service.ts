@@ -38,4 +38,6 @@ export class CryptoApiService {
       .map( (res: Response) => res.json() )
       .do(res => console.log(res));
   }
+
+  // 3. Other Data from BTC
 }

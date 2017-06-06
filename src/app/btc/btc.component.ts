@@ -17,10 +17,8 @@ export class BtcComponent implements OnInit {
   currentDate: any;
   currentTime: any;
   bitCoinPrice: any;
-  etherPrice: any;
 
-  constructor(  private _timeApiService: TimeApiService,
-                private _cryptoService: CryptoApiService ) { }
+  constructor(  private _cryptoService: CryptoApiService ) { }
 
   ngOnInit() {
     this.getUpdate();
@@ -30,14 +28,6 @@ export class BtcComponent implements OnInit {
     this.bitCoinPrice = this._cryptoService.getBitcoinPrice()
       .subscribe((res) => this.bitCoinPrice = res);
 
-    this.etherPrice = this._cryptoService.getEthereumPrice()
-      .subscribe((res) => this.etherPrice = res);
-
-    this.currentDate = this._timeApiService.getDateTime()
-      .subscribe( res => this.currentDate = res.date);
-
-    this.currentTime = this._timeApiService.getDateTime()
-      .subscribe( res => this.currentTime = res.time);
    }
 
 }

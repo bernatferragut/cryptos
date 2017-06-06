@@ -13,6 +13,7 @@ import { CryptoApiService } from './services/crypto-api.service';
 import { BtcComponent } from './btc/btc.component';
 import { EthComponent } from './eth/eth.component';
 import { router } from './app.routes';
+import { MomentModule } from 'angular2-moment';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { router } from './app.routes';
     MdCardModule,
     MdToolbarModule,
     MdIconModule,
-    RouterModule.forRoot(router, {useHash: true})
+    RouterModule.forRoot(router, {useHash: true}),
+    MomentModule
   ],
   providers: [TimeApiService, CryptoApiService],
   bootstrap: [AppComponent]
