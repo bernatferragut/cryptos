@@ -1,1 +1,26 @@
-<h1> MODULE </h1>
+<!--BTC MAIN-->
+
+<h1 class="title">
+  ETHER STATS
+</h1>
+
+<h1 class="divflex">
+  {{ currentDate }}, {{ currentTime }}
+</h1>
+
+<h1 class="divflex">
+  BTC: {{ bitCoinPrice?.last }} $
+</h1>
+
+<h1 class="divflex">
+  ETH: {{ etherPrice?.data?.price?.usd }} $
+</h1>
+
+<div class="divflex">
+  <button 
+    md-fab
+    (click)="getUpdate()"
+    class="button">
+    <md-icon>update</md-icon>
+  </button>
+</div>
