@@ -2,9 +2,8 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 body {
-    padding: 2em 2em;
+    padding: 1em 1em;
     background:black;
     font-family: 'Doppio One', sans-serif;
     color: white;
 }
-
