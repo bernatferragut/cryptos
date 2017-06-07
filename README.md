@@ -11,6 +11,6 @@ to sell or guy whenever the prices hits your interest.
 
 # Image - WIP
 
-![crypto](https://cloud.githubusercontent.com/assets/17754060/26634683/65f18168-45e5-11e7-82b5-1a707e16cb42.jpg)
+![crypto-design2](https://user-images.githubusercontent.com/17754060/26887892-5bf9577a-4b77-11e7-8889-e254bfa0f84c.jpg)
 
 
