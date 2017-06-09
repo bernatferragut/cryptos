@@ -41,5 +41,9 @@ The result gives us a beautiful, simple and well design UX where I can see clear
 
 This is only the beginnng, I'm very excited to learn and create more with this new technology, this will be the bread and butter of the internet in the near future. I hope you got the interest to start investigating about it !
 
+==================================
+
+> This is the first project of a series of projects about crypto currencies
+
 
 
