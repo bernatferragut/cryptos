@@ -1,0 +1,17 @@
+<div fxFlexFill fxLayout="row" fxLayoutAlign="center center">
+  <md-card style="margin:0; width:200px; background-color:lightblue; color: black">
+    <i class="material-icons">lock_outline</i> LOGIN
+      <md-card-content>
+          <md-input-container>
+            <input mdInput placeholder="Username" required>
+          </md-input-container>
+          <md-input-container>
+            <input mdInput placeholder="Password" required type="password"> 
+          </md-input-container>
+      </md-card-content>
+      <md-card-actions align="end">
+          <button md-button (click)="onAction1">Lost Password</button>
+          <button md-raised-button color="accent" (click)="onAction2">Sign in</button>
+      </md-card-actions>
+  </md-card>
+</div>
