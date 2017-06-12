@@ -45,5 +45,7 @@ This is only the beginnng, I'm very excited to learn and create more with this n
 
 > This is the first project of a series of projects about crypto currencies
 
+> We are adding Typescript Angular Flexbox 
+
 
 
